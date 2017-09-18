@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: yellow;
+            }
+            
+            .column{
+                box-sizing: border-box;
+                width: 100%;
+                background-color: white;
+                border: 1px solid black;
+                min-height: 20vh;
+                margin-bottom: 5vh;
+                vertical-align: top;
+            }
+            
+            .links{
+                display: none;
+            }
+            
+            @media all and (min-width: 600px){
+                body{
+                    background-color: green;
+                }
+                
+                .column{
+                    display: inline-block;
+                    width: 45%;
+                    margin-left: 2.5%;
+                    margin-right: 2.5%;
+                }
+            }
+            
+            @media all and (min-width: 800px){
+                body{
+                    background-color: blue;
+                }
+                
+                .column{
+                    width: 28.33%;
+                    
+                }
+                
+                #mobileMenu{
+                    display: none;
+                }
+                
+                .links{
+                    display: inline;
+                    color: black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+      <header>
+          <nav>
+            
+             <img id="mobileMenu" img src="2icon.png" />
+              <a class="links" href="index.html">Home</a>
+              <a class="links" href="index.html">About</a>
+              <a class="links" href="index.html">Contact</a>
+
+          </nav>
+      </header>
+       <div class="column">
+            Some text
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+           Some text
+       </div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div><!--
+       --><div class="column"></div>
+
+        
+    </body>
+</html>
