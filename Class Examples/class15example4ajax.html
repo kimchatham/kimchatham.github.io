@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <label>Enter your zip code:</label>
+        <input id="zip" />
+        <button type="button" id="getWeather">Get Weather</button>
+        
+        <br/><br/>
+        <input type="color" id="color" />
+        <button type="button" id="changeColor">Change Color</button>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            //on click of getWeather button
+            $("#getWeather").click(function(event){
+                //read in zipcode
+                var userZip = $("#zip").val();
+                //make Ajax Call
+                $.ajax({
+                    url: "http://api.openweathermap.org/data/2.5/weather",
+                    data: {
+                        units: "imperial",
+                        zip: userZip,
+                        APIKEY: "2117c2b1ddb21bc7921325ae970c66de"
+                    }
+                }).success(function(data){
+                    $("body").append("The temp in "+data.name+" is "+data.main.temp);
+                });
+            });
+            
+            $("#changeColor").click(function(event){
+                var userColor = $("#color").val();
+                $.ajax({
+                    method: "PUT",
+                    url: "https://api.lifx.com/v1/lights/all/state",
+                    headers: {
+                        "Authorization": "Bearer c2035038f2e650b246885e9aa7f4135f4eb3138bdb602d7ba84c85871042e248"
+                    },
+                    data: {
+                        "power": "on",
+                        "color": userColor,
+                        "brightness": 1,
+                        "duration": 0
+                    }
+                }).success(function(data){
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

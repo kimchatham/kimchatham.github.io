@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Roboto|Satisfy" rel="stylesheet">
+      <!--font-family: 'Satisfy', cursive;'Roboto', sans-serif; 'Pontano Sans', sans-serif;-->
+      <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+       <title>Kim Chatham</title>
+       <style>
+            body{
+               margin: 0;
+               font-family: 'Pontano Sans', sans-serif;
+               box-sizing: border-box; 
+           }
+            
+           header{
+               height: 10vh;
+               width: 100%;
+               background-color: rgb(166, 166, 166);
+            }
+            
+           #mobilenavBox{
+               height: 10vh;
+               width: 10vh;
+               position: absolute;
+               top: 0;
+               left: 0;
+               font-size: 4vh;
+               color: rgb(241,241,241);
+            }
+           
+           #mobilenavIcon{
+               margin-top: 1.5vh;
+               margin-left: 1.5vh;
+               border: 0.5vh solid rgb(241,241,241);
+               padding: 1vh;
+           }
+           
+            #desktopNav{
+                display: none;
+           }
+           
+           #mobileMenu{
+                display: none;
+                position: fixed;
+                height: 40vh;
+                width: 100%;
+                background-color:  rgb(38,38,38);
+                top: 0;
+                left: 0;
+               z-index: 2;
+            }
+            
+            .mobilenavLinks{
+                display: block;
+                height: 10vh;
+                text-align: center;
+                line-height: 10vh;
+                border-bottom: 2px solid white;
+                font-size: 6vh;
+                color: rgb(241,241,241);
+                text-decoration: none;
+                font-family: 'Pontano Sans', sans-serif;
+            }    
+            
+            .mobilenavLinks:hover{
+                background-color: rgb(166, 166, 166);
+           }
+           
+           #bigPicture{
+               width: 100%;
+               height: 90vh;
+               background-image: url(portfolioPhotos/backgroundNameBoxnew.png);
+               background-size: cover;
+               background-repeat: no-repeat;
+               z-index: -1;
+               opacity: 0.2; 
+               position: relative;
+               
+           }
+           
+           h1{
+               position: absolute;
+               top: 28vh;
+               left: 10vh;
+               font-size: 10vh;
+               color: rgb(176,97,109);
+               font-family: 'Satisfy', cursive;
+           }
+           
+           #myJob{
+               font-size: 4vh;
+               position: absolute;
+               top: 36vh;
+               left: 19vh;
+               color: rgb(241,241,241);
+               text-shadow: 
+                  -2px -2px 0px #000,
+                  0px -2px 0px #000,
+                  2px -2px 0px #000,
+                  -2px  0px 0px #000,
+                  2px  0px 0px #000,
+                  -2px  2px 0px #000,
+                  0px  2px 0px #000,
+                  2px  2px 0px #000;0;
+               font-family: 'Roboto', sans-serif;
+           }
+           
+           .leftBoxes{
+               width: 100%;
+               color: rgb(241,241,241);
+               font-size: 2vh;
+               background-color: rgb(166, 166, 166);
+               display: inline-block;
+               text-align: center;
+               vertical-align: middle;
+               line-height: 2vh;
+               font-family: 'Pontano Sans', sans-serif;
+               margin-top: -4px;
+           }
+           
+           .rightBoxes{
+               width: 100%;
+               height: 70vh;
+               color: rgb(143, 140, 142);
+               background-color: rgb(248, 241, 242);
+               font-size: 2.5vh;
+           }
+           
+           #aboutInfo{
+              overflow: scroll; 
+           }
+           
+           p{
+               font-size: 1.5vh;
+               padding: 2vh;
+           }
+           
+           #porfolioGallery{
+               width: 100%;
+               height: 35vh;
+           }
+           
+           #contactMe{
+               width: 80%;
+               display: inline-block;
+               margin-top: 125.65px;
+               margin-left: 98px; 
+           }
+           
+           input{
+               width: 98%;
+               height: 3.5vh;
+               border: 2px solid rgb(143, 140, 142);
+               border-radius: 4px;
+           }
+           
+           #messageField{
+               width: 98%;
+               height: 12vh;
+               border: 2px solid rgb(143, 140, 142);
+               border-radius: 4px;
+           }
+           
+           .contactButtons{
+               width: 40%;
+               font-size: 1vh;
+               color: rgb(38,38,38);
+               background-color: rgb(166, 166, 166);
+               display: inline;
+               font-size: 2vh;
+               border: 2px solid rgb(38,38,38);
+           }
+           
+           #sendButton{
+               margin-right: 156.8px;
+           }
+           
+           footer{
+               width: 100%;
+               height: 5vh;
+               color: rgb(38,38,38);
+               font-size: 2vh;
+               display: inline-block;
+               text-align: center;
+               vertical-align: bottom;
+               line-height: 2vh;
+               background-color: rgb(248, 241, 242);
+           }
+           
+        </style>
+        <body>
+               <nav id="mobilenavBox">
+                    <span id="mobilenavIcon" class="fa fa-bars"></span>
+               </nav>
+               <header>
+                <div id="desktopNav">
+                    <a class="desktopnavLinks" href="index.html">HOME</a>
+                  <a class="desktopnavLinks" href="index.html">ABOUT</a>
+                  <a class="desktopnavLinks" href="index.html">PORTFOLIO</a>
+                  <a class="desktopnavLinks" href="index.html">CONTACT</a>
+                </div>
+                <div id="mobileMenu">
+                 <!--ask about nav links removing formating-->
+                  <a class="mobilenavLinks" href="indexchangingheader.html">HOME</a>
+                  <a class="mobilenavLinks" href="#aboutText">ABOUT</a>
+                  <a class="mobilenavLinks" href="#portfolioText">PORTFOLIO</a>
+                  <a class="mobilenavLinks" href="#contactText">CONTACT</a>
+                </div>
+                </header>
+                <h1>Kim Chatham<span id="myJob">Aspiring Front End Web Developer</span></h1>
+                <div id="bigPicture"></div><!--
+               --><div id="aboutText" class="leftBoxes">
+               <h2>About</h2>
+            </div>
+            <div id="aboutInfo" class="rightBoxes">
+              <p>I am currently continuing my education with Interface Schools through their Foundations of Web Development class. I am actively seeking a front end web development position.
+              <br/><br/>
+              My background is in education and managment. Traditional eduction lead me to earn a BA in English and an MA in Eduction.
+              <br/><br/>
+              After completing my masters degree, I worked as a middle school English teacher for nearly 5 years. After experience burnout in the classroom, I completed a culinary degree and went on to manage a high volumne retail operation for 2 years. I have always been interested in technology.
+              <br/><br/>
+              While I was working as a teacher, I maintained a webpage for my classes and incorporated technology in my lessons whenever possible. During my time in management, I use a  variety of web applications on a daily basis in addition to building and maintaining an extensive menu for my store with *register sytem*.
+              <br/><br/>
+              In my free time I enjoy traveling with my husband and being the best pet parent possible to our two cats.</p>
+            </div>
+            <div id="portfolioText" class="leftBoxes">
+               <h2>Portfolio</h2>
+            </div>
+            <div id="porfolioGallery">
+            </div>
+            <div id="contactText" class="leftBoxes" >
+               <h2>Contact</h2>
+            </div>
+               <div id="contactInfo" class="rightBoxes" >
+               
+               <div id="contactMe">
+                   <span id="wtText">Interested in working together?
+                   <br/>
+                   <br/>
+                   Complete the form below with information about your project and I'll be in touch soon!</span>
+                   <br/>
+                   <br/>
+                <form id="contactForm">
+                <form action="mailto:chathamkg@gmail.com" method="post" enctype="text/plain">
+                    First and Last Name: <br/>
+                        <input type="text" name="name">
+                        <br/>
+                        <br/>  
+                    E-mail:<br/>
+                        <input type="text" name="mail">
+                        <br/>
+                        <br/>
+                    Message:<br/>
+                        <input id="messageField" type="text" name="Message">
+                        <br/>
+                        <br/>
+                        <input id="sendButton" class="contactButtons" type="submit" value="Send"><!--
+                        --><input class= "contactButtons" type="reset" value="Reset">
+                </form>
+                </form>
+                </div>
+             </div>
+            <footer>
+               <span>&#169; 2017 Kim Chatham</span>
+            </footer>
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous"></script>
+            <script>
+            $("#mobilenavBox").click(function(event){
+                $("#mobileMenu").show(500);
+            });
+            
+            $("#mobileMenu").click(function(event){
+                $("#mobileMenu").hide(500);
+            });
+           </script>
+        </body>
+    </head>
+</html>

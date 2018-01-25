@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 100%;
+                height: 100vh;
+                perspective: 200px;
+            }
+            
+            .cube{
+                transform-style: preserve-3d;
+                width: 20vw;
+                height: 20vw;
+                position: absolute;
+                top: 40vw;
+                left: 40vw;
+                transition: transform 1s;
+            }
+            
+            .seeFront{
+                
+            }
+            
+            .seeTop{
+                transform: rotateX(-90deg);
+            }
+            
+            .seeBottom{
+                transform: rotateX(90deg);
+            }
+            
+            .seeBack{
+                transform: rotateY(180deg);
+            }
+            
+            .seeLeft{
+                transform: rotateY(90deg);
+            }
+            
+            .seeRight{
+                transform: rotateY(-90deg);
+            }
+            
+            .cubeSide{
+                position: absolute;
+                width: 20vw;
+                height: 20vw;
+                color: white;
+            }
+            
+            .front{
+                background-color: rgba(255, 0, 0, 0.6);
+                transform: translateZ(10vw);
+            }
+            
+            .back{
+                background-color: rgba(0, 255, 0, 0.6);
+                transform: rotateY(-180deg) translateZ(10vw);
+            }
+            
+            .top{
+                background-color: rgba(0, 0, 255, 0.6);
+                transform: rotateX(90deg) translateZ(10vw);
+            }
+            
+            .bottom{
+                background-color: rgba(255, 0, 255, 0.6);
+                transform: rotateX(-90deg) translateZ(10vw);
+            }
+            
+            .left{
+                background-color: rgba(255, 255, 0, 0.6);
+                transform: rotateY(-90deg) translateZ(10vw);
+            }
+            
+            .right{
+                background-color: rgba(0, 255, 255, 0.6);
+                transform: rotateY(90deg) translateZ(10vw);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="cube seeTop">
+                <div class="cubeSide front">1</div>
+                <div class="cubeSide back">2</div>
+                <div class="cubeSide top">3</div>
+                <div class="cubeSide bottom">4</div>
+                <div class="cubeSide left">5</div>
+                <div class="cubeSide right">6</div>
+            </div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script src="common.js"></script>
+        <script>
+            var classes = ["seeFront", 
+                           "seeBack", 
+                           "seeTop", 
+                           "seeBottom",
+                           "seeLeft", 
+                           "seeRight"];
+            
+            setInterval(function(){
+                var newNumber = randomNumber(0,5);
+                var newClassName = classes[newNumber];
+                for(var i in classes){
+                    $(".cube").removeClass(classes[i])
+                }
+                $(".cube").addClass(newClassName);
+            }, 2000);
+        </script>
+    </body>
+</html>

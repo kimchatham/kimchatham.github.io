@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #userView{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="enterName">
+            <h1>Please enter your name</h1>
+            <input id="name" />
+            <button id="submit" type="button">Submit</button>
+        </div>
+        <div id="userView">
+            <h1>Welcome <span id="nameToReplace">name</span>!</h1>
+            <span id="logout">Log Out</span>
+        </div>
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            function updatePageUserName(userName){
+                $("#enterName").hide();
+                $("#userView").show();
+                $("#nameToReplace").text(userName);
+            }
+            
+            //on click of our logout button
+            $("#logout").click(function(event){
+                //hide userView
+                $("#userView").hide();
+                //show enterName view
+                $("#enterName").show();
+                //remove localStorage of userName
+                localStorage.removeItem("userName");
+            });
+            
+            
+            //on click of our submit button
+            $("#submit").click(function(event){
+                //get user entered name
+                var userName = $("#name").val();
+                //save off that name for future visits
+                localStorage.userName = userName;
+                //change the page to welcome them by name
+                updatePageUserName(userName);
+            });
+            
+            
+            
+            //on page load
+            if(localStorage.userName != undefined){
+                updatePageUserName(localStorage.userName);
+            }
+            //check if we already know the users name
+            //change the page to welcome them by name
+        </script>
+    </body>
+</html>

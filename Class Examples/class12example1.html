@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                border: 6px solid transparent;
+            }
+        
+        </style>
+    </head>
+    <body>
+      
+      <button type="button" id="toggleInput">Show/Hide Input</button>
+       <div>
+           Text
+       </div>
+       <div>
+           Text 2
+       </div>
+       <div>
+           Text 3
+       </div>
+       <input id="name" type="text" />
+       
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script>
+            $("div").click(function(event){
+                 $(this).fadeOut(2000);          
+            });
+            
+            $("#name").blur(function(event){
+                $("body").annimate({
+                    "background-color": "red",
+                    "font-size": "10vh",
+                    "border": "10px",
+                    "border-style": "solid",
+                    "border-color": "black",
+                }, 3000);
+            })
+            
+            $("#toggleInput").click(function(event){
+                $("#name").toggle(500);                       
+                                    })
+        </script>
+    </body>
+</html>

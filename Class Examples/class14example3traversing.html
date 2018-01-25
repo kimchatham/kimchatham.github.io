@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .correct{
+                border: 1px solid green;
+            }
+            
+            .correctLabel{
+                color: green;
+            }
+            
+            .error{
+                border: 1px solid red;
+            }
+            
+            .errorLabel{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <label>What is 5 + 5?</label>
+        <input class="answer" ans="10" />
+        <br/>
+        
+        <label>What is 5 * 5?</label>
+        <input class="answer" ans="25" />
+        <br/>
+        
+        <label>What is 50 - 5?</label>
+        <input class="answer" ans="45" />
+        <br/>
+        
+        <label>What is 50 - 5?</label>
+        <input class="answer" ans="45" />
+        <br/>
+        
+        <label>What is 50 - 5?</label>
+        <input class="answer" ans="45" />
+        <br/>
+        
+        <label>What is the fastest animal?</label>
+        <input class="answer" ans="Cheetah" />
+        <br/>
+        
+        <br/>
+        <button id="submit" type="button">Submit</button>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+        
+            //on click of submit button
+            $("#submit").click(function(event){
+                $(".answer").each(function(){
+                    //for each answer check if user value is correct
+                        //get user answer
+                    var userAnswer = $(this).val();
+                        //get correct answer
+                    var correctAnswer = $(this).attr("ans");
+                        //compare
+                    if(userAnswer == correctAnswer){
+                        $(this).addClass("correct").removeClass("error");
+                        $(this).prev().addClass("correctLabel").removeClass("errorLabel");
+                        //if answer is correct green outline
+                        //if answer is correct label text green
+                    } else{
+                        $(this).addClass("error").removeClass("correct");
+                        $(this).prev().addClass("errorLabel").removeClass("correctLabel");
+                        //if answer is wrong red outline
+                        //if answer is wrong label text red                       
+                    }
+                });
+            });
+
+            
+        </script>
+    </body>
+</html>

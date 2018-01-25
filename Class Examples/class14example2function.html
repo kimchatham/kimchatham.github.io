@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <input id="name" />
+        <button id="add" type="button">Add Name</button>
+        <br/><br/>
+        <button id="done" type="button">Done Adding Names</button>
+        <br/>
+        <div id="container"></div>
+        <br/><br/>
+        <label>Side A: </label>
+        <input id="sideA" />
+        <br/>
+        <label>Side B: </label>
+        <input id="sideB" />
+        <br/>
+        <button id="calculate" type="button">Calculate</button>
+        <div id="answer"></div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            var namesList = [];
+            
+            function pythagorean(sideA, sideB){
+                var sideCSquared = sideA * sideA + sideB * sideB;
+                var sideC = Math.sqrt(sideCSquared);
+                return sideC;
+            }
+            
+            function randomNumber(start, end){
+                //figure out range of start to end
+                var range = Math.abs(end-start);
+                //run code to generate random number
+                var answer = parseInt(Math.random() * range + start);
+                //return random number
+                return answer;
+            }
+            
+            $("#add").click(function(event){
+                var userEnteredName = $("#name").val();
+                namesList.push(userEnteredName);
+                $("#name").val("");
+            });
+            
+            $("#done").click(function(event){
+                for(var i=0; i<namesList.length; i++){
+                    var name = namesList[i];
+                    $("#container").append("<div>"+name+"</div>");
+                }
+            });
+            
+            $("#calculate").click(function(event){
+                //get value for sideA
+                var userSideA = $("#sideA").val();
+                //get value for sideB
+                var userSideB = $("#sideB").val();
+                //calculate sideC
+                var answer = pythagorean(userSideA, userSideB);
+                //output answer to screen
+                $("#answer").text(answer);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 100%;
+                height: 100vh;
+                perspective: 1000px;
+            }
+            
+            .card{
+                display: inline-block;
+                transform-style: preserve-3d;
+                width: 30vw;
+                height: 45vh;
+                position: relative;
+                box-sizing: border-box;
+                color: white;
+                transition: transform 2s;
+                
+            }
+            
+            .flipOver{
+                transform: rotateY(-180deg);
+        
+            }
+            
+            .front{
+                position: absolute;
+                width: 30vw;
+                height: 45vh;
+                background-size: cover;
+            }
+            
+            .back{
+                position: absolute;
+                width: 30vw;
+                height: 45vh;
+                transform: translateZ(-1px) rotateY(180deg);
+                background-color: lightgray;
+            }
+            
+            #mountains1{
+                background-image: url(https://cdn.pixabay.com/photo/2017/03/14/17/43/mountain-2143877_960_720.jpg);
+            }
+            
+            #mountains2{
+                background-image: url(http://www.telegraph.co.uk/content/dam/Travel/galleries/travel/activityandadventure/The-worlds-most-beautiful-mountains/mountains-Kirkjufe_3374110a.jpg);
+            }
+            
+            #mountains3{
+                background-image: url(http://i2.cdn.cnn.com/cnnnext/dam/assets/170407220916-04-iconic-mountains-matterhorn-restricted-super-169.jpg);
+            }
+            
+            #mountains4{
+                background-image: url(https://s11.favim.com/orig/170110/aesthetic-landscape-nature-red-Favim.com-4986666.jpeg);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="card">
+                <div class="front" id="mountains1"></div>
+                <div class="back">
+                    <h1>Mountains</h1>
+                    <p>A bunch of text</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="front" id="mountains2"></div>
+                <div class="back">
+                    <h1>Mountains2</h1>
+                    <p>A bunch of text</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="front" id="mountains3"></div>
+                <div class="back">
+                    <h1>Mountains3</h1>
+                    <p>A bunch of text</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="front" id="mountains4"></div>
+                <div class="back">
+                    <h1>Mountains4</h1>
+                    <p>A bunch of text</p>
+                </div>
+            </div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            $(".card").click(function(){
+                $(this).toggleClass("flipOver");
+            });
+        </script>
+    </body>
+</html>

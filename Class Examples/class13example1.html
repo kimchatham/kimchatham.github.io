@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <label>Background Color: </label>
+        <input id="color" />
+        <button type="button" id="submit">Submit</button>
+        
+        <script
+              src="https://code.jquery.com/jquery-2.2.4.js"
+              integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+              crossorigin="anonymous"></script>
+        <script>
+            $("#submit").click(function(event){
+                var userColor = $("#color").val();
+                console.log("The user entered " + userColor);
+                if(userColor == "white"){
+                    $("body").css({
+                        "background-color": "white",
+                        "color": "black"
+                    });
+                }else if(userColor == "red"){
+                    $("body").css({
+                        "background-color": "red",
+                        "color": "white"
+                    });
+                }else{
+                    $("body").css({
+                        "background-color": userColor
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

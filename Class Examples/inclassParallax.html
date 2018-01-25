@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            #container{
+                transform-style: preserve-3d;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                perspective: 1px;
+            }
+            
+            #mountains{
+                transform-style: preserve-3d;
+                width: 100%;
+                transform: translateZ(-10px) scale(11);
+            }
+            
+            #overlay{
+                width: 30vw;
+                padding: 2vw;
+                position: absolute;
+                top: 50vh;
+                left: 50%;
+                background-color: rgba(0, 0, 0, 0.4);
+                transform: translate(-50%, -50%);
+                color: white;
+                text-align: center;
+            }
+            
+            #arrow{
+                position: absolute;
+                top: 70vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+            
+            #hotairbaloon{
+                transform-style: preserve-3d;
+                position: absolute;
+                top: 60vh;
+                right: -20vw;
+                height: 40vh;
+                transform: translateZ(-1px) scale(2);
+            }
+            
+            #hotairbaloon2{
+                transform-style: preserve-3d;
+                position: absolute;
+                top: 10vh;
+                left: -20vw;
+                height: 20vh;
+                transform: translateZ(-3px) scale(4);
+            }
+            
+            #foreground{
+                transform-style: preserve-3d;
+                position: absolute;
+                top: 180vh;
+            }
+            
+            .car{
+                width: 40vw;
+                position: relative;
+                left: 0;
+                top: 0;
+                opacity: 1;
+            }
+            
+            #car1{
+                transition: top 2s ease, left 5s ease, opacity 5s ease;
+            }
+            
+            #car2{
+                transition: top 2s ease, left 10s ease, opacity 5s ease;
+                top: 0;
+            }
+            
+            .drive{
+                left: 100vw;
+                opacity: 0.5;
+                top: 0;
+            }
+            
+            #car2.drive{
+                top: 15vh;
+            }
+            
+            #road{
+                position: absolute;
+                top: 100vh;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img id="mountains" src="https://static.pexels.com/photos/15382/pexels-photo.jpg" />
+            <div id="overlay">
+                <h1>Welcome</h1>
+            </div>
+            <div id="arrow">
+                <img src="SixteenDesignImages/3arrow.png" />
+            </div>
+            <img id="hotairbaloon2" src="http://www.schabc.org/wp-content/gallery/balloons2016/Sushi_800.png" />
+            <img id="hotairbaloon" src="http://www.schabc.org/wp-content/gallery/balloons2017/Indigo.png" />
+            <img id="road" src="https://distraught1.github.io/road.png" />
+            <div id="foreground">
+                <img id="car1" class="car" src="https://www.moj.io/wp-content/themes/mojio-child/assets/img/home/orangecar.png" />
+                <img id="car2" class="car" src="https://cdn.pixabay.com/photo/2012/04/26/14/12/car-42576_960_720.png" />
+            </div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            $("#container").scroll(function(event){
+                var scrollPos = $("#container").scrollTop();
+                if(scrollPos > 800){
+                    $("#car1, #car2").addClass("drive");
+                }else{
+                    $("#car1, #car2").removeClass("drive");
+                }
+            });
+            
+            $("#arrow").click(function(){
+                $("#container").animate({
+                    scrollTop: 900
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>

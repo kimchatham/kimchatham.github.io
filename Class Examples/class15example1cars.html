@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .car{
+                height: 25vh;
+                width: 25vw;
+            }
+        </style>
+    </head>
+    <body>
+        <label>Car Color: </label>
+        <input type="color" id="carColor" />
+        <button id="addCar" type="button">Add Car</button>
+        <br/><br/>
+        <select id="selectCar">
+            <option></option>
+        </select>
+        
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        <script>
+            var listOfCars = [];
+            
+            var Car = function(){
+                this.color = "white";
+                this.speed = 0;
+                this.horsepower = 100;
+                this.isRunning = false;
+                
+                this.start = function(){
+                    this.isRunning = true;
+                }
+                
+                this.gas = function(){
+                    if(this.isRunning){
+                        this.speed += this.horsepower / 1;
+                    }
+                }
+                
+                this.brake = function(){
+                    if(this.speed >= 1){
+                        this.speed--;
+                    }else{
+                        this.speed = 0;
+                    }
+                }
+                
+                this.draw = function(){
+                    //add a new box on the page
+                    var carId = "car" + listOfCars.length;
+                    var carName = "Car " + (listOfCars.length+1)
+                    $("body").append("<div id='"+carId+"' class='car'></div>");
+                    //set the color of our box to the color of the car
+                    $("#"+carId).css("background-color", this.color);
+                    $("#selectCar").append("<option value='"+carId+"'>"+carName+"</option>");
+                }
+            }
+            
+            //when we click on addCar button
+            $("#addCar").click(function(event){
+                var newCar = new Car();
+                    //create a new car
+                var userColor = $("#carColor").val();
+                    //read in user color of car
+                newCar.color = userColor;
+                    //set color of car in newCar
+                newCar.draw();
+                listOfCars.push(newCar);
+                    //add new car to a list of cars
+            })
+            
+        </script>
+    </body>
+</html>

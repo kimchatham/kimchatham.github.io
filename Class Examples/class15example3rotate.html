@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .circle{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: red;
+                border: 1px solid black;
+                width: 10vmin;
+                height: 10vmin;
+                border-radius: 50%;
+                transition: 1.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous"></script>
+        
+        <script>
+            function randomNumber(start, end){
+                //figure out range of start to end
+                var range = Math.abs(end-start);
+                //run code to generate random number
+                var answer = parseInt(Math.random() * range + start);
+                //return random number
+                return answer;
+            }
+            
+            function randomColor(){
+                //random number from 0-255
+                    //red
+                    //green
+                    //blue
+                var red = randomNumber(0, 255);
+                var green = randomNumber(0, 255);
+                var blue = randomNumber(0, 255);
+                //build css value to return: "rgb(##, ##, ##)"
+                return "rgb("+red+", "+green+", "+blue+")";
+            }
+            
+            var timeoutId = setInterval(function(){
+                $(".circle").each(function(){
+                    $(this).css("background-color", randomColor());
+                
+                    var maxLeft = $(document).width() - $(this).width();
+                    var newLeft = randomNumber(0, maxLeft);
+                    $(this).css("left", newLeft);
+
+                    var maxTop = $(document).height() - $(this).height();
+                    var newTop = randomNumber(0, maxTop);
+                    $(this).css("top", newTop);
+                })
+            }, 1000);
+            
+            //onkeypress
+            $(document).on("keydown", function(event){
+                //if escape key
+                if(event.keyCode == 27){
+                    //clearInterval - stop
+                    clearInterval(timeoutId);
+                }
+            });
+        </script>
+    </body>
+</html>
