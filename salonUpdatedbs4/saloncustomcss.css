@@ -1,0 +1,56 @@
+.navColor{
+    background-color: rgba(61, 42, 67, 0.9);
+}
+
+#navbarText{
+    color: rgb(186, 192, 191);
+}
+
+#mainImage{
+    margin-bottom: 0;
+}
+
+.image {
+   background-image: url("salonImages/salonBackground2.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+     
+   }
+/*table{
+    table-layout: fixed;
+}*/
+
+.img-responsive{
+    width: 100%;
+}
+
+/*.thumbnail {
+    position: relative;
+}*/
+
+
+.caption {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 80%;
+}
+
+/*begin media queries*/
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #mainImage{
+        height: 100vh;
+    }
+    
+    .image {
+   background-image: url("salonImages/salonbackgroundLarge.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+    }
+    
+    /*.employee{
+        width: 100%;
+    }*/
+
+}    
