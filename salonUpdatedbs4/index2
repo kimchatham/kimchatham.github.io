@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <!--Bootstrap CSS-->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <link rel="stylesheet" href="salonUpdatedbs4/salonHover.css">
+   </head>
+   <style>
+       .jumbotron{
+           height: 25em;
+           background-image: url(salonImages/heroCornfield.jpeg);
+           background-attachment: fixed;
+           background-position: bottom;
+           background-repeat: no-repeat;
+           background-size: cover;
+           z-index: -5;
+       }
+       
+       .transparentBackground{
+           background: rgba(0, 0, 0, 0.2);
+               /*linear-gradient(
+           rgba(0, 0, 0, 0.5),
+           rgba(0, 0, 0, 0.5));*/
+           height: 17em;
+           width: 90%; 
+           z-index: -10;
+           
+       }
+       
+       h1{
+           color: rgba(245, 245, 245, 1);
+           
+       }
+          
+          
+       /*Carousel CSS#overlay{
+           background: linear-gradient(
+           rgba(0, 0, 0, 0.8),
+           rgba(0, 0, 0, 0.8)),
+           url(#salonCarousel);
+            background: cover;
+           position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+           
+       }
+       
+       #salonCarousel{
+           z-index: -1;
+           
+       }*/
+       
+       .card{
+           border-color: rgba(0, 0, 0, 0);
+           
+           
+       }
+             
+       .modal-dialog{
+            overflow-y: initial !important
+        }
+       
+       .modal-body{
+            max-height: calc(100vh - 225px);
+            overflow-y: auto;
+        }
+       
+       .serviceDesc{
+           font-weight: normal;
+       }
+       
+       #map{
+           min-height: 200px;
+       }
+       
+       
+
+       /*Small devices (landscape phones, 576px and up)*/
+       @media screen and (min-width: 576px) {
+           
+       }
+       
+       /*Medium devices (tablets, 768px and up)*/
+       @media screen and (min-width: 768px) {    }
+          
+       /*Large devices (desktops, 992px and up)*/
+       @media screen and (min-width: 992px) {    }
+       
+       /*Extra large devices (large desktops, 1200px and up)*/
+       @media screen and (min-width: 1200px) {    }
+       
+    </style>
+   <body>
+    <!--Creative Team-->
+      <div id="heroImg" class="jumbotron jumbotron-fluid">
+          <div class="container-fluid transparentBackground">
+              <h1 id="#salonName" class="display-3 font-weight-bold text-center">Midwest Hair Salon</h1>
+          </div>
+      </div>
+      <!--Current Staff-->
+       <div class="container-fluid">
+           <h2 class="my-3">Our Staff</h2>
+       </div>
+       <div class="container">     
+               <table>
+                   <tr>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e1.png">
+                       </td>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e2.png">
+                       </td>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e3.png">
+                       </td>
+                   </tr>
+                       <tr>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e4.png">
+                       </td>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e5.png">
+                       </td>
+                       <td>
+                           <img class="img-fluid img-thumbnail" src="salonImages/png/e6.png">
+                       </td>
+                   </tr>
+            </table>
+        </div>   
+        <div class="container-fluid">
+            <h2 class="my-3">Services</h2>
+               <div class="row">
+                 <!--Hair Cut Services-->
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                     <div class="card border-none" data-toggle="modal" data-target="#cutModal">
+                          <img class="card-img-top img-fluid" src="salonImages/cutcolorstyle/carouselCut2.png">
+                          <div class="card-body">
+                              <h3 class="card-title text-center">Cut</h3>
+                          </div>
+                          <div class="modal fade" id="cutModal" tabindex="-1" role="dialog" aria-labelledby="cutModal" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title modalLabel">Hair Cut Services</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table id="cutTable" class="table table-sm text-center">
+                                         <!--Women's Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Women's Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Women's Haircut</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Bang Trim</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Shampoo and Style</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                            </tbody>
+                                          <!--Men's Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Men's Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Men's Haircut</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Neck Shave/Trim</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Beard Sculpt</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                          <!--Children's Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Children's Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Children's Haircut</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Buzz Cut</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">First Haircut Package</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>      
+                  </div>
+                 <!--Hair Color Services-->
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                     <div class="card border-none" data-toggle="modal" data-target="#colorModal">
+                          <img class="card-img-top img-fluid" src="salonImages/cutcolorstyle/carouselColor2.png">
+                          <div class="card-body">
+                              <h3 class="card-title text-center">Color</h3>
+                          </div>
+                          <div class="modal fade" id="colorModal" tabindex="-1" role="dialog" aria-labelledby="colorModal" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title modalLabel">Hair Color Services</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table id="colorTable" class="table table-sm text-center">
+                                         <!--Single Process Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Single Process Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Single Process</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Ammonia Free</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Regrowth</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                            </tbody>
+                                          <!--Highlight Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Highlight Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Partial Foil</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Full Foil</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Partial Balayage</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Full Balayage</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>      
+                  </div>
+                 <!--Hair Style Services-->
+                 <div class="col-xs-12 col-sm-6 col-md-3">
+                     <div class="card border-none" data-toggle="modal" data-target="#styleModal">
+                          <img class="card-img-top img-fluid" src="salonImages/cutcolorstyle/carouselStyle2.png">
+                          <div class="card-body">
+                              <h3 class="card-title text-center">Style</h3>
+                          </div>
+                          <div class="modal fade" id="styleModal" tabindex="-1" role="dialog" aria-labelledby="styleModal" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title modalLabel">Hair Style Services</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table id="styleTable" class="table table-sm text-center">
+                                         <!--Style Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col"></th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Blowout/Curl</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Formal Updo</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Bridal</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                            </tbody>
+                                          <!--Texture Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Texture Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Keratin Smoothing Treatment</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Express Keratin Treatment</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Perm</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                          <!--Extension Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Extension Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Preparation/Adjustment</th>
+                                              <td>$/$</td>
+                                              <td>$/$</td>
+                                              <td>$/$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Application</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">Removal</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>      
+                  </div>
+                 <!--Salon Services-->
+                 <div class="col-xs-12 col-sm-6 col-md-3">
+                     <div class="card border-none" data-toggle="modal" data-target="#spaModal">
+                          <img class="card-img-top img-fluid" src="salonImages/cutcolorstyle/spa2.png">
+                          <div class="card-body">
+                              <h3 class="card-title text-center mb-0">Spa</h3>
+                              <p class="text-center">Coming Soon!</p>
+                          </div>
+                          <div class="modal fade" id="spaModal" tabindex="-1" role="dialog" aria-labelledby="cutModal" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title modalLabel">Spa Services</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table id="spaTable" class="table table-sm text-center">
+                                         <!--Nail Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Nails</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                            </tbody>
+                                          <!--Massage Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Massage Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                          <!--Facial Pricing-->
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left" scope="col">Facial Services</th>
+                                              <th scope="col">Salon Owner</th>
+                                              <th scope="col">Master Stylist</th>
+                                              <th scope="col">Apprentice Stylist</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="text-left serviceDesc" scope="row">TBD</th>
+                                              <td>$</td>
+                                              <td>$</td>
+                                              <td>$</td>
+                                            </tr> 
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>      
+                  </div>
+                </div>
+        </div>
+        <div class="container-fluid">
+            <h2 class="my-3">Products</h2>
+        </div>
+        <div class="container">
+           <!--Hair Product (shampoo/conditioner/style)Brand-->
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="img-fluid" src="salonImages/productImages/hairBottles.jpeg">
+                </div>
+                <div class="container col-xs-12 col-md-6">
+                    <span class="font-weight-bold text-left">Product Name</span>
+                        <p class="text-muted">Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>    
+            </div>
+            <br/>
+            <!--Hair Tools  (blowdryer/flat iron/brushes)Brand-->
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="img-fluid" src="salonImages/productImages/blowDryer.jpg">
+                </div>
+                <div class="container col-xs-12 col-md-6">
+                    <span class="font-weight-bold text-left">Product Name</span>
+                        <p class="text-muted">Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>    
+            </div>
+            <br/>
+            <!--Spa Product (oil/face masks/lotion)Brand-->
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="img-fluid" src="salonImages/productImages/spaProducts.jpeg">
+                </div>
+                <div class="container col-xs-12 col-md-6">
+                    <span class="font-weight-bold text-left">Product Name</span>
+                        <p class="text-muted">Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>    
+            </div>
+            <br/>
+            <!--Nail Product (nail polish/scrubs/)Brand-->
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="img-fluid" src="salonImages/productImages/makeup2.jpg">
+                </div>
+                <div class="container col-xs-12 col-md-6">
+                    <span class="font-weight-bold text-left">Product Name</span>
+                        <p class="text-muted">Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>    
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <h2 class="my-3">Contact/Location</h2>
+        </div>
+        <div class="container-fluid">
+           <div class="container">
+            <div class="row">
+                <div id="map" class="col-xs-12 col-md-6"></div>
+                <div class="col-xs-12 col-md-6">
+                    <span class="font-weight-bold text-left">Directions</span>
+                        <p class="text-muted">Directions to our location Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+      <!--jQuery-->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <!--Popper.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <!--Bootstrap JS Plugin-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+          function initMap() {
+            var uluru = {lat: 41.252721, lng: -96.002521};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+          }
+      </script>
+      <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnzY58Y8qfReAhZJmO6YoYYRzjuSvzV84&callback=initMap">
+    </script>
+     
+    
+    </body>
+</html>
