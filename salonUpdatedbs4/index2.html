@@ -5,11 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        <!--Bootstrap CSS-->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-       <link rel="stylesheet" href="salonUpdatedbs4/salonHover.css">
+        <!--Font Awesome-->
+       <link rel="stylesheet" src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">
    </head>
    <style>
        #topNav{
            background-color: white;
+       }
+       
+       #salonName{
+           color: black;
        }
       
        
@@ -32,6 +37,17 @@
            font-weight: normal;
        }
        
+       .reviewText{
+           text-align: center;
+           margin: 5%;
+           height: auto;
+           width: auto;
+       }
+       
+       .sliderControl{
+           color: black;
+       }
+       
        #map{
            min-height: 200px;
        }
@@ -40,17 +56,11 @@
 
        /*Small devices (landscape phones, 576px and up)*/
        @media screen and (min-width: 576px) {
-           .hiddenSmall{
-               display: none;
-           }
            
        }
        
        /*Medium devices (tablets, 768px and up)*/
        @media screen and (min-width: 768px) { 
-           .hiddenSmall{
-               display: none;
-           }
        }
           
        /*Large devices (desktops, 992px and up)*/
@@ -63,36 +73,35 @@
    <body>
    <!--Navigation-->
    <div  id="topNav" class="container-fluid sticky-top">
-  
-
-   <nav class="navbar navbar-expand-md navbar-light">
-      
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-       <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link ml-2" href="#">Staff </a>
-          <a class="nav-item nav-link" href="#">Services</a>
-          <a class="nav-item nav-link" href="#">Products </a>
-          <a class="nav-item nav-link" href="#">Contact</a>
-          <a class="navbar-brand m-0 text-center" href="#">Navbar</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
-          <a class="nav-item nav-link" href="#">Disabled</a>
-          <a class="nav-item nav-link" href="#">Home </a>
-          <a class="nav-item nav-link mr-2" href="#">Features</a>
-        </div>
-      </div>
-    </nav>
+       <a  href="#">
+            <h1 id="salonName" class="display-3 font-weight-bold text-center m-0">Midwest<span class="display-3">Hair Salon</span></h1> 
+        </a>
+       <nav class="navbar navbar-expand-md navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+           <div class="collapse navbar-collapse" id="navbarLinks">     
+            <div class="navbar-nav text-center m-0 p-2">
+              <a class="nav-item nav-link" href="#">Staff </a>
+              <a class="nav-item nav-link" href="#">Services</a>
+              <a class="nav-item nav-link" href="#">Products </a>
+              <a class="nav-item nav-link" href="#">Reviews</a>
+              <a class="nav-item nav-link" href="#">MHS</a>
+              <a class="nav-item nav-link fas fa-phone-square" href="#">Schedule Appointment</a>
+              <a class="nav-item nav-link" href="#">Gift Cards</a>
+              <a class="nav-item nav-link" href="#">Instagram</a>
+              <a class="nav-item nav-link" href="#">Twitter</a>
+            </div>
+          </div>
+        </nav>
     </div>
          
     <!--Front Page-->
     <div class="container-fluid">
         <img class="img-fluid" src="salonImages/heroCornfield.jpeg">
-         <div class="container">
-            <h1 id="#salonName" class="display-3 font-weight-bold text-center">Midwest</h1>
-                <span>Hair Salon</span>
-         </div>
+    </div>
+    <div class="navbar fixed-botton navbar">
+       
     </div>
       <!--Current Staff-->
        <div class="container-fluid">
@@ -619,40 +628,82 @@
         <div class="container-fluid">
             <h2 class="my-3">Gallery and Reviews</h2>
         </div>
-        <div class="container row">
-           <!--Gallery-->
+        <div class="container-fluid row">
+           <!--Gallery (linked to client Instagram where applicable-->
            <!--row 1 2x2 then md 3x3-->
-            <div class="col">
-               <h4 class="text-center">Our Amazing Clients!</h4>
-            <div class="row mt-0">
-                <div class="col">
+            <div class="col-xs-12">
+               <h4 class="text-center">See Our Gorgeous Clients!</h4>
+            <div class="row">
+                <div class="col-xs-3 col-md-4 col-lg-2  m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/blonde.jpeg">
                 </div>
-                <div class="col">
+                <div class="col-xs-3 col-md-4 col-lg-2 m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/blueHair.jpeg">
                 </div>
-                <div class="col hiddenSmall">
+                <div class="col-xs-3 col-md-4 col-lg-2 m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/BobStockSnap.jpg">
                 </div>
-                </div>
-            <!--row 1 2x2 then md 3x3-->
-               <div class="row">
-                <div class="col">
+                <div class="col-xs-3 col-md-4 col-lg-2 m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/bridal.jpeg">
                 </div>
-                <div class="col">
+                <div class="col-xs-3 col-md-4 col-lg-2 v m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/brunetteBangs.jpeg">
                 </div>
-                <div class="col hiddenSmall">
+                <div class="col-xs-3 col-md-4 col-lg-2 m-0 p-0">
                     <img class="img-fluid" src="salonImages/gallery/MensCutStockSnap.jpg">
                 </div>
                 </div>
             </div>
-            <!--Reviews-->
-            <div class="col">
-                <p>Reviews linked from ?</p>
+            <!--Reviews Linked to Yelp/other review site where applicable-->
+            <div class="col-xs-12">
+                <h4 class="text-center">Hear from Our Amazing Clients</h4><!--Carousel: Social Media Reviews-->
+                    <!--Carousel: Social Media Reviews-->
+                    <div id="salonReviews" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#salonReviews" data-slide-to="0" class="active"></li>
+                        <li data-target="#salonReviews" data-slide-to="1"></li>
+                        <li data-target="#salonReviews" data-slide-to="2"></li>
+                      </ol>
+                          <div class="carousel-inner">
+                            <!---Facebook Reviews-->
+                            <div class="carousel-item active">
+                                <div class="reviewText" ahref="#">
+                                    <p>Salon review. I love this salon because Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             <br/>
+                                              <span class="text-muted text-right">-Client Name and Date</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!---Yelp Reviews-->
+                            <div class="carousel-item">
+                              <div class="reviewText" ahref="#">
+                                    <p>Salon review. I love this salon because lsorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             <br/>
+                                              <span class="text-muted text-right">-Client Name and Date</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!---Other Reviews-->
+                            <div class="carousel-item">
+                                <div class="reviewText" ahref="#">
+                                    <p>Salon review. I love this salon because lsorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                             <br/>
+                                              <span class="text-muted text-right">-Client Name and Date</span>
+                                    </p>
+                                </div>
+                            </div>
+                              <a class="carousel-control-prev sliderControl" href="#salonReviews" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next sliderControl" href="#salonReviews" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                        
             </div>
-            
+            </div>
+            </div>
         </div>
         <!--Contact-->
         <div class="container-fluid">
@@ -690,8 +741,6 @@
       </script>
       <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnzY58Y8qfReAhZJmO6YoYYRzjuSvzV84&callback=initMap">
-    </script>
-     
-    
+        </script>
     </body>
 </html>

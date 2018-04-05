@@ -55,20 +55,20 @@
        #contactMe::before { 
           display: block; 
           content: " "; 
-          /*margin-top: -3.25em;*/ 
+          margin-top: -3.25em; 
           height: 4em; 
           visibility: hidden; 
           pointer-events: none;
         }
        
-       /*#emailMe::before { 
+       #emailMe::before { 
           display: block; 
           content: " "; 
-          margin-top: -3.25em; 
+          margin-top: -4.25em; 
           height: 4em; 
           visibility: hidden; 
           pointer-events: none;
-        }*/
+        }
        
        #codeLinks{ 
            background-color: #f5f5f5;
@@ -76,6 +76,7 @@
        }
        
        .icons{
+           color: rgba(37, 37, 41, 1);
            font-size: 2.5em;
            padding: 2vh;
        }
@@ -83,8 +84,8 @@
        .footer {
         position: static;
         bottom: 0;
-        min-height: 2.5em;
-        line-height: 2.5em;
+        min-height: 3.5em;
+        line-height: 3.5em;
         }
        
        /*Small devices (landscape phones, 576px and up)*/
@@ -146,7 +147,7 @@
                   </li> 
                   <li class="nav-item">
                     <a class="nav-link" onclick="emailFunction()" href="#contactMe">Contact</a>
-                  </li> 
+                  </li>
                 </ul>
               </div> 
             </nav>
@@ -162,10 +163,9 @@
             <div class="container-fluid text-center" id="aboutMe">
                 <img src="personalPhotos/linkedIns.png" class="img-fluid mx-auto rounded-circle" style="width: 200px; height: auto" alt="professional photo">
                    <h2>Hello and Welcome</h2>
-                    <p>I am currently persuing a career change from education and management to web development. I am taking classes through Interface: The Web School in Omaha, Nebraska. Additonally, I am learning in my own time online thorough programs such as W3Schools, FreeCodeCamp, and Kahn Academy. I am currently looking for a new opportunity to continue to improve my coding knowdelge and skills and gain real world experience.</p>
-                    <p>I am currently persuing a career change from education and management to web development. I am taking classes through Interface: The Web School in Omaha, Nebraska. Additonally, I am learning in my own time online thorough programs such as W3Schools, FreeCodeCamp, and Kahn Academy. I am currently looking for a new opportunity to continue to improve my coding knowdelge and skills and gain real world experience.</p>
+                    <p>I am currently persuing a career change from education and management to front end web development. I am taking classes through Interface: The Web School in Omaha, Nebraska. Additonally, I am learning in my own time online thorough programs such as W3Schools and FreeCodeCamp. I am currently looking for a new opportunity where I can use my  knowdelge of front end web development and gain real world experience.</p>
                         <h5>Current Skills</h5>
-                            <p>I currently have experience with HTML5, CSS, Bootstrap. I have some experience with with jQuery and JavaScript and am working to increase my knowledge of those frameworks/languages on daily basis. I am also begining to learn about CMS with WordPress. I have experience with responsive design, wireframing (Basalmiq) and version control (Github). I am currently working on building my own recipe management database with JavaScript and MySQL.</p>
+                            <p>I currently have experience with HTML5, CSS, Bootstrap. I have beginner level knowledge of jQuery and JavaScript. I am working to increase my knowledge of those frameworks/languages on daily basis. I am also beginning to learn about to develop with WordPress as well as learning about Amazon Web Services. I also have experience with responsive design, wireframing (Basalmiq) and version control (Github). I am currently working on building my own recipe management database with JavaScript and MySQL as well as continuing to build other websites for my portfolio.</p>
                                 <h5>Who am I?</h5>
                                     <p>I am a Southern transplant to the Midwest that now calls Omaha, Nebraska home.  I completed a culinary program a few years ago, and enjoying cooking for friends and family in my free time. I am a proud pet parent to two wonderful cats. </p> 
                                         <div class="row align-items-center">
@@ -273,9 +273,9 @@
           <!--Contact/Links to Code-->
            <div class="container-fluid text-center" id="codeLinks">
                     <i id="emailMe" class="far fa-envelope icons" onclick="emailFunction()" href="#contact2"></i>
-                    <i class="fab fa-linkedin icons"></i>  
-                    <i class="fab fa-github icons"></i>
-                    <i class="fab fa-free-code-camp icons"></i>   
+                    <a href="https://www.linkedin.com/in/kim-chatham-32391054/"><i class="fab fa-linkedin icons"></i></a>
+                    <a href="https://github.com/kimchatham/kimchatham.github.io.git"><i class="fab fa-github icons"></i></a>
+                    <a href="https://www.freecodecamp.org/kimchatham"><i class="fab fa-free-code-camp icons"></i></a>  
                   </div>
             <!--Footer-->
             <footer class="footer text-center bg-dark">
