@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Sixteen Creative Agency</title>
+       <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Source+Sans+Pro:400,700,700i" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                color: rgb(247,247,247);
+                
+            }
+            
+            header{
+                height: 10vh;
+                background-color: rgb(172,211,115);
+            }
+            
+            #logo{
+                height: 7vh;
+                margin-left: 5vw;
+                margin-top: 1.5vh;    
+            }
+            
+            nav{
+                height: 10vh;
+                width: 10vh;
+                background-color: rgb(137,168,92);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            
+            #menu{
+                height: 4vh;
+                width: 4vh;
+                margin-top: 3vh;
+                margin-left: 3vh;
+            }
+            
+            #mobileNav{
+                background-color: black;
+                opacity: .8;
+                font-size: 10px;
+                border: 5px;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                display: none;
+            }
+            
+            .mnClick{
+                font-family: "Source Sans Pro";
+                color: white;
+                font-weight: 600;
+                font-size: 10vh;
+                text-decoration: none;
+                padding: 15vh;
+                vertical-align: middle;
+                margin: 8vh;
+            }
+            
+            
+            #navLinks{
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: 2.5vh;
+                display: none;
+                
+            }
+            
+            .links{
+                font-family: "Source Sans Pro";
+                font-weight: 900;
+                font-size: 2.5vh;
+                text-decoration: none;
+                padding: 2vh;
+            }
+            
+            main{
+                height: 90vh;
+                background-color: rgb(154,189,103);
+                text-align: center;
+                background-image: url("Desktop_Sixteen/4siluetBGDesktop.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: bottom;
+            }
+            
+            h1{
+                font-size: 5vmin;
+                font-family: "Source Sans Pro";
+                margin-top: 25vh;
+            }
+            
+            h2{
+                font-size: 3.5vmin;
+                font-family: "Droid Serif";
+                font-style: italic;
+                font-weight: 400;    
+            }
+            
+            #arrow{
+                height: 3vh;
+                margin-top: 5vh;
+            }
+            
+            
+            @media all and (min-width: 1001px){
+                
+                header{
+                    height: 12.5vh;
+                    width: 100%;
+                }
+                
+                #logo{
+                    margin-top: 2.75vh;
+                    margin-left: 7vw;
+                    
+                }
+                
+                nav{
+                    display: none;
+                }
+                
+                #menu{
+                    display: none;
+                }
+                
+                #mobileNav{
+                    display: none;
+                }
+                
+                #navLinks{
+                    margin-top: 5vh;
+                    margin-right: 7vw;
+                    display: inline;
+                }
+                
+                .links{
+                    display: inline;
+                }
+                
+            }
+            
+            @media all and (min-width: 1200px){
+                #logo{
+                    margin-left: 12.5vw;
+                }
+                
+                #navLinks{
+                    margin-right: 12.5vw;
+                }
+                            
+            main{
+                height: 87.5vh;
+                
+            }
+            
+            h1{
+                font-size: 6vh;
+                font-weight: 900;
+                margin-top: 27vh;
+            }
+            
+            h2{
+                font-size: 3vh;   
+            }
+            
+            #arrow{
+                height: 3vh;
+                margin-top: 12vh;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="Desktop_Sixteen/1logo.png" />
+                   <div id="navLinks"> 
+                        <a class="links" href="index.html">HOME</a>
+                        <a class="links" href="index.html">ABOUT</a>
+                        <a class="links" href="index.html">SERVICES</a>
+                        <a class="links" href="index.html">TEAM</a>
+                        <a class="links" href="index.html">WORKS</a>
+                        <a class="links" href="index.html">CLIENT SAY</a>
+                        <a class="links" href="index.html">BLOG</a>
+                        <a class="links" href="index.html">CONTACT</a>
+                   </div>
+                <nav>
+                    <img id="menu" src="Desktop_Sixteen/2icon.png" />
+                </nav>                
+        </header>
+        <div id="mobileNav">
+            <div id="moblienavLinks">
+                <a class="mnClick" href="index.html">HOME</a>
+                <a class="mnClick" href="index.html">ABOUT</a>
+                <a class="mnClick" href="index.html">SERVICES</a>
+                <a class="mnClick" href="index.html">TEAM</a>
+                <a class="mnClick" href="index.html">WORKS</a>
+                <a class="mnClick" href="index.html">CLIENT SAY</a>
+                <a class="mnClick" href="index.html">BLOG</a>
+                <a class="mnClick" href="index.html">CONTACT</a>
+            </div>
+        </div>
+        <main>
+            <br/>
+            <h1>WE ARE SIXTEEN CREATIVE AGENCY</h1>
+            <br/>
+            <h2>Based on Jakarta, Indonesia</h2>
+            <img id="arrow" src="Desktop_Sixteen/3arrowDesktop.png" />
+        </main>
+        
+    
+    <script 
+        src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $("#menu").click(function(event){
+            $("#mobileNav").show("#mobilenavLinks");
+            
+        });
+        
+        
+        $("#mobileNav").hide(function(event){
+            $(".mnClick").click();                
+        });
+        
+        $(".mnClick").click(function(event){
+            $("#mobileNav").hide();
+        });
+        </script>
+    </body>
+</html>
