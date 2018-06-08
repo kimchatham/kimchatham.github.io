@@ -1,5 +1,5 @@
        .jumbotron{
-           height: 30em;
+           height: 55em;
            background: linear-gradient(
            rgba(0, 0, 0, 0.5),
            rgba(0, 0, 0, 0.5)),
@@ -123,32 +123,24 @@
        }
        /*Large devices (desktops, 992px and up)*/
        @media screen and (min-width: 992px) {
-           #resumebtn{
-            font-size: 6vh;
+           .jumbotron{
+           height: 60em;
            }
            
-         .icons{
-           font-size: 16vh;
-           
-       }
-           
-           
+           #resumebtn{
+            font-size: 4vh;
+           }
+             
        }
        /*Extra large devices (large desktops, 1200px and up)*/
        @media screen and (min-width: 1200px) {
+             .jumbotron{
+           height: 65em;
+           }
            #intro{
                max-width: 1200px;
                max-height: 25em;
            }
-           
-           #resumebtn{
-            font-size: 8vh;
-           }
-           
-            .icons{
-           font-size: 22vh;
-           
-       }
                
         }
           
