@@ -115,7 +115,7 @@
            }
            
             .icons{
-           font-size: 14vh;
+           font-size: 12vh;
            
        }
     
@@ -133,14 +133,54 @@
              
        }
        /*Extra large devices (large desktops, 1200px and up)*/
-       @media screen and (min-width: 1200px) {
-             .jumbotron{
-           height: 65em;
+       @media screen and (min-width: 1300px) {
+/*
+           #navBar{
+               line-height: 4rem;
+           } 
+*/
+           
+           a.navar-brand{
+               font-size: 3.5rem;
            }
+           
+           a.nav-link{
+               font-size: 3rem;
+           }
+           span.navbar-toggler-icon{
+               width: 3em;
+               height: 3em;
+           }
+
+           
+           
+           .jumbotron{
+           height: 75em;
+           }
+           
            #intro{
-               max-width: 1200px;
-               max-height: 25em;
+               margin-top: 10em;
            }
+           #aboutMe h2{
+               font-size: 6rem;
+           }
+          
+           #aboutMe h4{
+               font-size: 4rem;
+           }
+           
+           #aboutMe p{
+               font-size: 2.5rem;
+           }
+           
+           #portfolio h2{
+               font-size: 6rem;
+           }
+           
+           span.text-muted{
+               font-size: 4vh;
+           }
+           
                
         }
           
