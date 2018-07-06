@@ -1,0 +1,48 @@
+body html{
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.jumbotron{
+    height: 100vh;
+    text-align: center;
+    background: url(bg-image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.section-style{
+        justify-content: center;
+        margin-top: 60%;
+    }
+
+h1{
+    font-family: 'Bad Script', cursive;
+    
+}
+
+h1 span{
+    color: rgba(85, 50, 133, 1);
+    font-weight: 900;
+    
+    
+}
+
+
+
+/* #writeportunity{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+/* #vertical-line{
+    border-left: 1vw solid black;
+    height: 10vh;
+} */
+/* #kanise-marshall{
+
+} */ 
+
