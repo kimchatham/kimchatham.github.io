@@ -32,7 +32,7 @@ h1 span{
 /* Packages CSS */
 
 #packages .card-deck{
-    margin: 3em;
+    margin: 3.25em;
   }
   
   #packages .card{
@@ -40,7 +40,7 @@ h1 span{
     border: 1px solid rgba(80, 50, 133, 1);
   }
   
-  #pacakges .card-header{
+  #packages .card-header{
     background-color:rgba(80, 50, 133, 1);
   }
   
@@ -107,30 +107,59 @@ h1 span{
 }
 
 /* Kanise Portfolio CSS */
-#kanise-marshall {
+
+#kanise-marshall{
+    margin: 3.25em;
+}
+#bio-grid {
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 10vw 30vw 50vw;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 10vw 40vw;
     grid-gap: 1em;
     margin: 0 auto;
     padding: 1em 0;
   }
   
-  #kanise-name,
-  #kanise-portfolio {
+  #kanise-name {
     grid-column: 1 / span 2;
+    
   }
+
+  #kanise-name h3{
+    font-family: 'Bad Script', cursive;
+    color: rgba(80, 50, 133, 1);
+    font-weight: bold;
+  }
+
   
   #kanise-name,
   #kanise-image,
   #kanise-bio,
   #kanise-portfolio {
-    background: #eaeaea;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-#kanise-portfolio .card{
+  #kanise-bio{
+      background: #eaeaea;
+  }
+
+  #kanise-portfolio h4{
+    font-family: 'Bad Script', cursive;
+    color: rgba(80, 50, 133, 1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #kanise-portfolio .card-container{
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+    }
+/* #kanise-portfolio .card{
     display: inline-block;
-}
+} */
