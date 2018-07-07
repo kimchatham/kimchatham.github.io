@@ -26,22 +26,166 @@
             <!-- mobile menu -->
                 <nav class="mobile-menu">
                   <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Packages</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>Kanise Marshall</a></li>									
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#kanise-marshall">Kanise Marshall</a></li>									
                   </ul>
                 </nav>
         </header>
 
-        <main class="jumbotron jumbotron-fluid">
+        <main id="home" class="jumbotron jumbotron-fluid">
             <section id="writeportunity" class="section-style">
                 <h1><span>WRITE</span>portunity</h1>
             </section>
-            <!-- <section id="kanise-marshall" class="section-style">
-                <h3>Kanise Marshall</h3> -->
-            </section>
         </main>
-        
+        <section id="packages">
+            <!-- development feedback -->
+            <div class="card-deck">
+                <div class="card">
+                <div class="card-header">
+                    <h5>Story Development</h5>   
+                </div>
+                  <div class="card-body">
+                    <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
+                  </div>
+                  <div class="card-footer"></div>
+                </div>
+                <!-- beta reading -->
+                <div class="card">
+                        <div class="card-header">
+                                <h5>Beta Reading</h5>   
+                            </div>
+                  <div class="card-body">
+                    <p class="card-text">More info about services offered...maybe bulleted lists, etc.</p>
+                  </div>
+                  <div class="card-footer"></div>
+                </div>
+                <!-- public speaking -->
+                <div class="card">
+                        <div class="card-header">
+                                <h5>Public Speaking</h5>   
+                            </div>
+                  <div class="card-body">
+                    <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
+                  </div>
+                  <div class="card-footer"></div>
+                </div>
+              
+              <!-- dictation/transcription -->
+              <div class="card">
+                    <div class="card-header">
+                            <h5>Transcription</h5>   
+                        </div>
+                <div class="card-body">
+                  <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+            </div>
+
+        </section>
+        <!-- contact form -->
+        <section id="contact">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 m-auto">
+                                <div class="contact-form">
+                                    <h1>Get in Touch</h1>
+                                    <form action="/examples/actions/confirmation.php" method="post">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="inputName">Name</label>
+                                                    <input type="text" class="form-control" id="inputName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail" required>
+                                                </div>
+                                            </div>
+                                        </div>            
+                                        <div class="form-group">
+                                            <label for="inputSubject">Subject</label>
+                                            <input type="text" class="form-control" id="inputSubject" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputMessage">Message</label>
+                                            <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+                                        </div>            
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section id="kanise-marshall">
+                <div id="kanise-name">
+                        <h5>Kanise Marshall</h5> 
+                      </div>
+                      <div id="kanise-image">
+                        <img src="" alt="Photo of Kanise Marshall">
+                      </div>
+                      <div id="kanise-bio">
+                        Kanise Bio
+                      </div>
+                    
+                      <div id="kanise-portfolio">
+                        <div class="card-columns">
+                          <div class="card">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Poetry</h5>
+                              <p class="card-text">Placeholder Text.</p>
+                            </div>
+                          </div>
+                          <div class="card p-3">
+                            <blockquote class="blockquote mb-0 card-body">
+                              <p>Placeholder Text</p>
+                              <footer class="blockquote-footer">
+                                <small class="text-muted">Someone famous in <cite title="Source Title">Source Title</cite></small>
+                              </footer>
+                            </blockquote>
+                          </div>
+                          <div class="card">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Fiction</h5>
+                              <p class="card-text">Placeholder Text</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                          <div class="card bg-primary text-white text-center p-3">
+                            <blockquote class="blockquote mb-0">
+                              <p>Placeholder Test.</p>
+                              <footer class="blockquote-footer">
+                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                              </footer>
+                            </blockquote>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-body">
+                              <h5 class="card-title">Other Work</h5>
+                              <p class="card-text">Placeholder Text</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                          <div class="card p-3 text-right">
+                            <blockquote class="blockquote mb-0">
+                              <p>Placeholder Text</p>
+                              <footer class="blockquote-footer">
+                                <small class="text-muted">Someone famous in <cite title="Source Title">Source Title</cite></small>
+                              </footer>
+                            </blockquote>
+                          </div>
+                          
+                          </div>
+                          </div>
+        </section>
 </body>
 </html>

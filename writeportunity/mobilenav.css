@@ -76,19 +76,21 @@
     display:block;
     text-align: center;
     text-decoration:none;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(16, 16, 16, 1);
     font-size: 1.5em;
     font-weight: bold;
+    padding:1.5vh;
     overflow:hidden;
     position:relative;
     text-transform: uppercase;
     }
 
-.mobile-menu a hover {
-    color:rgba(80, 50, 133, .5);
+.mobile-menu a:hover {
+    color:rgba(80, 50, 133, 1);
 }
 
 .mobile-menu--open {
   right:0;
   opacity:1;
 }
+

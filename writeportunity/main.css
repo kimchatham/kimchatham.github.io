@@ -29,20 +29,108 @@ h1 span{
     
 }
 
+/* Packages CSS */
+
+#packages .card-deck{
+    margin: 3em;
+  }
+  
+  #packages .card{
+    margin: 1em;
+    border: 1px solid rgba(80, 50, 133, 1);
+  }
+  
+  #pacakges .card-header{
+    background-color:rgba(80, 50, 133, 1);
+  }
+  
+  #packages .card-header h5{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    
+  }
+  
+  #packages .card-footer{
+    background-color: rgba(255, 255, 255, 1);
+  }
 
 
-/* #writeportunity{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
+/* Contact Form CSS */
 
-/* #vertical-line{
-    border-left: 1vw solid black;
-    height: 10vh;
-} */
-/* #kanise-marshall{
+#contact{
+    background-color: rgba(85, 50, 133, 1);
+}
 
-} */ 
+.contact-form {
+    padding: 50px;
+    margin: 30px auto;
+    
+}	
+.contact-form h1 {
+    font-size: 42px;
+    /* font-family: 'Pacifico', sans-serif; */
+    margin: 0 0 50px;
+    text-align: center;
+}
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+.contact-form .form-control, .contact-form .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.contact-form .form-control {
+    border-color: rgba(85, 50, 133, 1);
+}
+.contact-form .form-control:focus {
+    border-color: #d8b012;
+    box-shadow: 0 0 8px #dcae10;
+}
+.contact-form .btn-primary {
+    min-width: 250px;
+    color: rgba(85, 50, 133, 1);
+    background: #000;
+    margin-top: 20px;
+    border: none;
+}
+.contact-form .btn-primary:hover {
+    color: #fff; 
+}
+.contact-form .btn-primary i {
+    margin-right: 5px;
+}
+.contact-form label {
+    opacity: 0.9;
+}
+.contact-form textarea {
+    resize: vertical;
+}
 
+/* Kanise Portfolio CSS */
+#kanise-marshall {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 10vw 30vw 50vw;
+    grid-gap: 1em;
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+  
+  #kanise-name,
+  #kanise-portfolio {
+    grid-column: 1 / span 2;
+  }
+  
+  #kanise-name,
+  #kanise-image,
+  #kanise-bio,
+  #kanise-portfolio {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#kanise-portfolio .card{
+    display: inline-block;
+}
