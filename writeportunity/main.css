@@ -3,31 +3,45 @@ body html{
     
 }
 
+:root{
+    --writebrand: rgb(55, 29, 62);
+    --greybackground: rgb(250, 250, 250);
+
+}
+
 .jumbotron{
     height: 100vh;
     text-align: center;
-    background: url(bg-image.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+    background-color: var(--writebrand);
+    
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+logo{
+    width: 200px;
+    height: 200px;
+
+}
 .section-style{
         justify-content: center;
         margin-top: 60%;
     }
 
-h1{
+/* h1{
     font-family: 'Bad Script', cursive;
     
 }
 
 h1 span{
-    color: rgba(85, 50, 133, 1);
+    color: var(--writebrand);
     font-weight: 900;
     
     
-}
+} */
 
 /* Packages CSS */
 
@@ -37,11 +51,11 @@ h1 span{
   
   #packages .card{
     margin: 1em;
-    border: 1px solid rgba(80, 50, 133, 1);
+    border: 1px solid var(--writebrand);
   }
   
   #packages .card-header{
-    background-color:rgba(80, 50, 133, 1);
+    background-color:var(--writebrand);
   }
   
   #packages .card-header h5{
@@ -58,12 +72,14 @@ h1 span{
 /* Contact Form CSS */
 
 #contact{
-    background-color: rgba(85, 50, 133, 1);
+    background-color: var(--greybackground);
 }
 
 .contact-form {
     padding: 50px;
     margin: 30px auto;
+    border-color: var(--writebrand);
+    color: var(--writebrand);
     
 }	
 .contact-form h1 {
@@ -71,6 +87,7 @@ h1 span{
     /* font-family: 'Pacifico', sans-serif; */
     margin: 0 0 50px;
     text-align: center;
+    color: var(--writebrand);
 }
 .contact-form .form-group {
     margin-bottom: 20px;
@@ -80,7 +97,7 @@ h1 span{
     border-radius: 2px;
 }
 .contact-form .form-control {
-    border-color: rgba(85, 50, 133, 1);
+    border-color: var(--writebrand);
 }
 .contact-form .form-control:focus {
     border-color: #d8b012;
@@ -88,8 +105,8 @@ h1 span{
 }
 .contact-form .btn-primary {
     min-width: 250px;
-    color: rgba(85, 50, 133, 1);
-    background: #000;
+    color: var(--greybackground);
+    background: var(--writebrand);
     margin-top: 20px;
     border: none;
 }
@@ -127,7 +144,7 @@ h1 span{
 
   #kanise-name h3{
     font-family: 'Bad Script', cursive;
-    color: rgba(80, 50, 133, 1);
+    color: var(--writebrand);
     font-weight: bold;
   }
 
@@ -147,7 +164,7 @@ h1 span{
 
   #kanise-portfolio h4{
     font-family: 'Bad Script', cursive;
-    color: rgba(80, 50, 133, 1);
+    color: var(--writebrand);
     text-align: center;
     display: flex;
     align-items: center;
@@ -160,6 +177,22 @@ h1 span{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 1rem;
     }
-/* #kanise-portfolio .card{
-    display: inline-block;
-} */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
