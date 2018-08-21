@@ -35,59 +35,124 @@
         </header>
 
         <main id="home" class="jumbotron jumbotron-fluid">
-            <!-- <section id="writeportunity" class="section-style">
-                <h1><span>WRITE</span>portunity</h1>
-            </section> -->
             <section>
                 <img id=mobile-logo src="/images/writeportunity-mobilelogo.png" alt="Writeportuity logo">
                 <img id=logo src="/images/writeportunity-logo.png" alt="Writeportunity Logo">
             </section>
         </main>
         <section id="packages">
+            <h3>Writeportunity offers story development, beta reading, ghostwriting, and transcription services for all stage of the writing process.</h3>
             <!-- development feedback -->
+            
             <div class="card-deck">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-xl-3"> 
                 <div class="card">
                 <div class="card-header">
                     <h5>Story Development</h5>   
                 </div>
                   <div class="card-body">
-                    <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
+                      <p>Writeportunity offers Story Development services for people who have a partial or completed work that needs further development in specific areas. This package includes:</p>
+                    <p class="card-text">
+                        <ul>
+                            <li>Development Sessions</li>
+                                <ul>
+                                    <li>Block Option A: Three – Five Hours</li>
+                                    <li>Block Option B: Five – Ten Hours</li>
+                                    <li>Block Option C: Ten and Up hours</li>
+                                </ul>
+                                <br>
+                            <li>Plot Development and Character Construction</li>
+                            <br>
+                            <li>Review of Genre Motifs</li>
+                            <br>   
+                            <li>Review for Overall Continuity </li>
+                        </ul> 
+                    </p>
                   </div>
                   <div class="card-footer"></div>
                 </div>
+            </div>
+        
+    
+
                 <!-- beta reading -->
+                
+                        <div class="col-xs-12 col-md-6 col-xl-3">
                 <div class="card">
                         <div class="card-header">
                                 <h5>Beta Reading</h5>   
                             </div>
                   <div class="card-body">
-                    <p class="card-text">More info about services offered...maybe bulleted lists, etc.</p>
+                    <p>The Beta Reading package is meant for those who have a complete manuscript. This package includes:</p>
+                    <p class="card-text">
+                        <ul>
+                            <li>Two – One Hour Long Sessions</li>
+                            <br>
+                            <li>Complete Works Review with comprehensive notes</li>
+                            <br>
+                            <li>Qualitative Rubric including Review of Genre Motifs</li>
+                            <br>
+                            <li>Review for Overall Readability and Audience Reachability </li>
+                        </ul>
+                    </p>
                   </div>
                   <div class="card-footer"></div>
                 </div>
-                <!-- public speaking -->
-                <!-- <div class="card">
-                        <div class="card-header">
-                                <h5>Public Speaking</h5>   
-                            </div>
-                  <div class="card-body">
-                    <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
-                  </div>
-                  <div class="card-footer"></div>
-                </div>
-               -->
+            </div>
               <!-- dictation/transcription -->
+                    <div class="col-xs-12 col-md-6 col-xl-3">
               <div class="card">
                     <div class="card-header">
-                            <h5>Transcription</h5>   
+                            <h5>Ghostwriting/Transcription</h5>   
                         </div>
                 <div class="card-body">
-                  <p class="card-text">More info about services offered...maybe bulleted lists, etc</p>
+                    <p>The Ghostwriting and Transcription package allows clients to have Writeportunity take their recordings and notes and bring their story to life. This can be customized from the services below:
+                        </p>
+                  <p class="card-text">
+                        <ul>
+                                <li>Ghostwriting/Transcription Sessions</li>
+                                    <ul>
+                                        <li>Block Option A: Three – Five Hours</li>
+                                        <li>Block Option B: Five – Ten Hours</li>
+                                        <li>Block Option C: Ten and Up hours</li>
+                                    </ul>
+                                    <br>
+                                <li>Editing of Work</li>
+                                <br>
+                                <li>Completed Manuscript</li>
+                            </ul> 
+                  </p>
                 </div>
                 <div class="card-footer"></div>
               </div>
             </div>
-
+              <!-- a la carte -->
+              <div class="col-xs-12 col-md-6 col-xl-3">
+              <div class="card">
+                    <div class="card-header">
+                            <h5>A la Carte</h5>  
+                        </div>
+                <div class="card-body">
+                    <p>A la carte options are avaialbe for customers interested in 
+                        </p>
+                  <p class="card-text">
+                        <ul>
+                                <li>Blocks of One Hour Long Development Sessions</li>   
+                                <br>
+                                <li>Blocks of One Hour Long Meetings as needed to discuss project</li>
+                                <br>
+                                <li>Transcribed story from recordings</li>
+                            </ul> 
+                  </p>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+              </div>
+              <h4>All package options include a statement of work providing deliverables for each portion of work and a meeting with Square Penny Publishing.</h4>
+            </div>
+        </div>
+    </div>
         </section>
         <!-- contact form -->
         <section id="contact">
@@ -96,33 +161,69 @@
                             <div class="col-md-8 col-md-offset-2 m-auto">
                                 <div class="contact-form">
                                     <h1>Get in Touch</h1>
-                                    <form action="/examples/actions/confirmation.php" method="post">
-                                        <div class="row">
+                                     <!-- <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzRqyj71Z83xpuf98QUDm_X0RO5mHGdIJ3osNvr3hZovi9PNAY/exec">
+                                        <div class="form-row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label for="inputName">Name</label>
-                                                    <input type="text" class="form-control" id="inputName" required>
+                                                    <label for="name">Name</label>
+                                                    <input id="name" type="text" class="form-control" placeholder="First and Last Name"  required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label for="inputEmail">Email</label>
-                                                    <input type="email" class="form-control" id="inputEmail" required>
+                                                    <label for="email">Email</label>
+                                                    <input id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="youremail@email.com"  required>
                                                 </div>
                                             </div>
                                         </div>            
                                         <div class="form-group">
-                                            <label for="inputSubject">Subject</label>
-                                            <input type="text" class="form-control" id="inputSubject" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputMessage">Message</label>
-                                            <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                                            <label for="message">Message</label>
+                                            <textarea id="message" name="message" class="form-control"  rows="5" required></textarea>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
-                                        </div>            
-                                    </form>
+                                        </div> 
+                                        <!-- Customise the Thankyou Message People See when they submit the form: -->
+                                         <!-- <div class="thankyou_message" style="display:none;">
+                                            <h2><em>Thanks</em> for contacting us!
+                                            We will get back to you soon!</h2>
+                                        </div>            -->
+                                    <!-- </form> --> 
+                                    <form id="gform" method="POST"
+  action="https://script.google.com/macros/s/AKfycbzfrya_agDrUyqI3VRULhuCGbAZTeAEPDWMxWJzbA/exec">
+    <!-- change the form action to your script url -->
+
+    
+      <div class="form-group">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" class="form-control" placeholder="First and Last name">
+      </div>
+
+      <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" class="form-control" type="email"
+            required placeholder="your.name@email.com"/>
+            <span class="email-invalid" style="display:none">
+              Must be a valid email address</span>
+            </div>
+
+      <div class="form-group">
+        <label for="message">Message: </label>
+        <textarea id="message" name="message" type="text" class="form-control" rows="10"
+        placeholder="Tell us what's on your mind..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="thankyou_message" style="display:none;">
+      <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
+
+  </form>
+
                                 </div>
                             </div>
                         </div>
@@ -144,15 +245,19 @@
             <div id="kanise-portfolio">
                 
                 <div class="card-container">
+                    <br>
                         <h4>My Writing</h4>
+                        <br>
                     <div class="card-columns">
+                        <!-- poetry -->
                         <div class="card">
                             <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Poetry</h5>
-                                        <p class="card-text">Placeholder Text.</p>
+                                        <p class="card-text">lorem ipsum</p>
                                 </div>
                         </div>
+                        <!-- inspirational quote -->
                         <div class="card p-3">
                             <blockquote class="blockquote mb-0 card-body">
                                 <p>Placeholder Text</p>
@@ -161,11 +266,12 @@
                                     </footer>
                             </blockquote>
                         </div>
+                        <!-- fiction -->
                         <div class="card">
                             <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">Fiction</h5>
-                                        <p class="card-text">Placeholder Text</p>
+                                        <p class="card-text">lorem ipsum</p>
                                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                         </div>
@@ -195,5 +301,7 @@
 
             </div>
         </section>
+        <script data-cfasync="false" type="text/javascript" src="email-form-submission.js"></script>
+       
 </body>
 </html>

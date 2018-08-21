@@ -21,10 +21,15 @@ body html{
     align-items: center;
 }
 
-logo{
-    width: 200px;
-    height: 200px;
+#mobile-logo{
+    max-width: 200px;
+    max-height: 200px;
+}
 
+#logo{
+    max-width: 800px;
+    max-height: 800px;
+    
 }
 .section-style{
         justify-content: center;
@@ -44,6 +49,9 @@ h1 span{
 } */
 
 /* Packages CSS */
+section#packages h3 h4{
+    text-align: center;
+}
 
 #packages .card-deck{
     margin: 3.25em;
@@ -171,25 +179,52 @@ h1 span{
     justify-content: center;
   }
 
-  #kanise-portfolio .card-container{
+  #kanise-portfolio-mobile .card-container{
         display: grid;
         padding: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 1rem;
     }
+
+   
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    
+    #logo{
+        display: none;
+    }
+   
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    #mobile-logo{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    #logo{
+        display: none;
+    }
+    #kanise-portfolio-mobile .card-container{
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        grid-gap: 1rem;
+    }
 
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #mobile-logo{
+        display: none;
+    }
 
+    #logo{
+        display: inherit;
+        width: 600px;
+        height: 600px;
+    }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
