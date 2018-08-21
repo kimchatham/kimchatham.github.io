@@ -55,7 +55,7 @@
   cursor: pointer;
   transition: 0.6s ease;
   top:0;
-  background-color:rgb(166, 166, 166);
+  background-color: var(--greybackground);
   opacity: 0;
 }
 
@@ -86,7 +86,7 @@
     }
 
 .mobile-menu a:hover {
-    color:rgba(80, 50, 133, 1);
+    color: var(--writebrand);
 }
 
 .mobile-menu--open {

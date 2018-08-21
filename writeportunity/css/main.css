@@ -53,6 +53,10 @@ section#packages h3, h4{
     text-align: center;
 }
 
+.card{
+    display: flex;
+}
+
 #packages .card-deck{
     margin: 3.25em;
   }
