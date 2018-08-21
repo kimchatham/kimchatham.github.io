@@ -49,7 +49,7 @@ h1 span{
 } */
 
 /* Packages CSS */
-section#packages h3 h4{
+section#packages h3,h4{
     text-align: center;
 }
 
