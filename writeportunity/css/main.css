@@ -51,6 +51,7 @@ h1 span{
 /* Packages CSS */
 section#packages h3, h4{
     text-align: center;
+    color: var(--writebrand);
 }
 
 .card{
@@ -85,6 +86,7 @@ section#packages h3, h4{
 
 #contact{
     background-color: var(--greybackground);
+    
 }
 
 .contact-form {
@@ -107,6 +109,7 @@ section#packages h3, h4{
 .contact-form .form-control, .contact-form .btn {
     min-height: 38px;
     border-radius: 2px;
+    
 }
 .contact-form .form-control {
     border-color: var(--writebrand);
@@ -121,12 +124,22 @@ section#packages h3, h4{
     background: var(--writebrand);
     margin-top: 20px;
     border: none;
+    
 }
 .contact-form .btn-primary:hover {
     color: #fff; 
 }
 .contact-form .btn-primary i {
     margin-right: 5px;
+    
+}
+
+button.btn.btn-primary{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .contact-form label {
     opacity: 0.9;
@@ -196,6 +209,9 @@ section#packages h3, h4{
     #logo{
         display: none;
     }
+    .card{
+        min-height: 34em;
+    }
    
 
 }
@@ -208,6 +224,10 @@ section#packages h3, h4{
     }
     #logo{
         display: none;
+    }
+
+    .card{
+        min-height: 34em;
     }
     #kanise-portfolio-mobile .card-container{
         display: grid;
@@ -233,5 +253,8 @@ section#packages h3, h4{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .card{
+        min-height: 45em;
+    }
 
 }
