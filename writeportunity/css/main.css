@@ -186,6 +186,9 @@ button.btn.btn-primary{
   #kanise-bio{
       background: #eaeaea;
   }
+  div#kanise-bio p{
+      padding: 4em;
+  }
 
   #kanise-portfolio h4{
     font-family: 'Bad Script', cursive;
@@ -227,7 +230,7 @@ button.btn.btn-primary{
     }
 
     .card{
-        min-height: 34em;
+        min-height: 45em;
     }
     #kanise-portfolio-mobile .card-container{
         display: grid;
@@ -252,9 +255,9 @@ button.btn.btn-primary{
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1500px) {
     .card{
-        min-height: 45em;
+        min-height: 60em;
     }
 
 }
