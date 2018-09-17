@@ -185,9 +185,10 @@ button.btn.btn-primary{
 
   #kanise-bio{
       background: #eaeaea;
+      border: 1px solid var(--writebrand);
   }
   div#kanise-bio p{
-      padding: 4em;
+      padding: 2em;
   }
 
   #kanise-portfolio h4{
@@ -197,6 +198,12 @@ button.btn.btn-primary{
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  #kanise-portfolio h5{
+    font-family: 'Bad Script', cursive;
+    color: var(--writebrand);
+    text-align: left;
   }
 
   #kanise-portfolio-mobile .card-container{
@@ -212,7 +219,7 @@ button.btn.btn-primary{
     #logo{
         display: none;
     }
-    .card{
+    #packages .card{
         min-height: 34em;
     }
    
@@ -229,7 +236,7 @@ button.btn.btn-primary{
         display: none;
     }
 
-    .card{
+    #packages .card{
         min-height: 45em;
     }
     #kanise-portfolio-mobile .card-container{
