@@ -196,6 +196,8 @@ button.btn.btn-primary{
   }
     #kanise-portfolio{
         margin: 4em;
+        text-align: center;
+    
 
     }
 
@@ -213,6 +215,18 @@ button.btn.btn-primary{
     color: var(--writebrand);
     text-align: left;
     margin-top: 4em;
+  }
+
+  span#summary{
+      text-align: center;
+  }
+
+  hr{
+    width: 50%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--writebrand);
+    font-weight: bold;
   }
 
   /* #kanise-portfolio-mobile .card-container{
