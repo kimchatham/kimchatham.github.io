@@ -9,23 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/mobilenav.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/mobilemenu.js"></script>
 </head>
 <body>
     <!-- mobile nav -->
         <header>
             <!-- nav hamburger button -->
-                <div class="mobile-nav-button">
+            <div class="mobile-nav-button">
+                 <div class="mobile-nav-button__line"></div>
                   <div class="mobile-nav-button__line"></div>
                   <div class="mobile-nav-button__line"></div>
-                  <div class="mobile-nav-button__line"></div>
-                </div>
+            </div>
             <!-- mobile menu -->
                 <nav class="mobile-menu">
-                  <ul>
+                  <ul class="navbar-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#packages">Packages</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -73,8 +74,6 @@
                   <div class="card-footer">Story Development services start at $25/hour</div>
                 </div>
             </div>
-        
-    
 
                 <!-- beta reading -->
                 
@@ -177,22 +176,27 @@
             <!-- </div> -->
         </section>            
             <section id="kanise-portfolio">
-                    <h4>My Writing</h4>
+                    <!-- <h4>My Writing</h4> -->
 
                 <!-- fiction -->
                 <h5>Fiction</h5>
                 <div id="fiction" class="card-deck">
                         
                         <div class="card col-xs-12 col-sm-6">
-                                <img class="card-img-top" src="/images/willow-book-cover-c.jpg" alt="Card image cap">
+                                <img id="willow-cover" class="card-img-top" src="/images/willow-book-cover-c.jpg" alt="Card image cap">
                                     
                         </div>
                         <div class="card col-xs-12 col-sm-6">
-                                    <div class="card-body">
+                                    <div id="willow-summary" class="card-body">
                                             <span id="summary">Summary</p>
                                             <hr>
                                             <p class="card-text">After one failed relationship too many, Gale Marsden has finally decided that she will most likely end up alone. However, through a turn of events that includes her meddling best friend, a simple encounter with a handsome stranger will turn Gale’s entire world topsy turvy. As Gale’s new relationship grows, she discovers secrets about her life that shift her existence in epic proportions.
                                                      </p>
+                                            <hr>
+                                            <button  id="buy-book" class="btn btn-primary" type="button">
+                                            <a href="https://www.amazon.com/Call-Willow-Willows-Kanise-Marshall/dp/1732778116/" target="_top">Purchase a copy today!</a>
+                                            </button>
+
                                                 
                                     </div>
                         </div>
@@ -234,44 +238,32 @@
             <div id="hr-two"></div>
             <div id="hr-three"></div>
                 <div class="container py-5">
-                  <div class="row">
+                  <div class="row mx-auto">
                     <div class="col-6 col-md">
-                      <h5><b>Follow Writeportunity</b></h5>
-                      <ul class="list-unstyled text-small">
-                        <li>
-                          <a class="text-muted" href="#">Facebook</a>
-                        </li>
-                        <li>
- <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</li>
-                        <li>
-                          <a class="text-muted" href="#">Pay</a>
-                        </li>
-                      </ul>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact">
+                                <span>Contact Writeportunity</span>
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="contactLongTitle">Contact Writeportunity</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <img src="/images/writeportunitybc.pdf" alt="Writeportunity Business Card">
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                     </div>
                     <div class="col-6 col-md">
                       <h5><b>Follow Kanise Marshall</b></h5>
@@ -281,12 +273,6 @@
                         </li>
                         <li>
                           <a class="text-muted" href="https://www.youtube.com/channel/UChV_O8R1QT5JP4J9PTIMCxg">YouTube</a>
-                        </li>
-                        <li>
-                          <a class="text-muted" href="#">LinkedIn?</a>
-                        </li>
-                        <li>
-                          <a class="text-muted" href="#">Other</a>
                         </li>
                       </ul>
                     </div>
@@ -300,14 +286,11 @@
                           <a class="text-muted" href="https://www.logojoy.com/">Logo Joy</a>
                           <small class="text-muted">-Use code 'AbEnCgdiR' for $20 off!</small>
                         </li>
-                        <li>
-                          <a class="text-muted" href="#">Business Cards</a>
-                        </li>
                       </ul>
                     </div>
                 </div>
                   <div id="footer-copyright">
-                      <img src="/images/writeportunity-icon.png" alt="Writeportunity Logo"> <small class="my-3 text-muted"> © 2018</small> Writeportunity</div>
+                      <img src="/images/writeportunity-icon.png" alt="Writeportunity Logo"> <small class="my-3 text-muted"> © 2019</small> Writeportunity</div>
 </div>
                 </div>
               </footer>

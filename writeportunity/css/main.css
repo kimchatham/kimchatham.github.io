@@ -83,7 +83,7 @@ section#packages h3, h4{
 
 
 /* Contact Form CSS */
-
+/* 
 #contact{
     background-color: var(--greybackground);
     
@@ -98,7 +98,7 @@ section#packages h3, h4{
 }	
 .contact-form h1 {
     font-size: 42px;
-    /* font-family: 'Pacifico', sans-serif; */
+    /* font-family: 'Pacifico', sans-serif; 
     margin: 0 0 50px;
     text-align: center;
     color: var(--writebrand);
@@ -146,7 +146,7 @@ button.btn.btn-primary{
 }
 .contact-form textarea {
     resize: vertical;
-}
+} */
 
 /* Kanise Portfolio CSS */
 
@@ -215,6 +215,19 @@ button.btn.btn-primary{
     color: var(--writebrand);
     text-align: left;
     margin-top: 4em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  #willow-cover {
+      max-width: 400px;
+      max-height: 700px;
+  }
+
+  #willow-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   span#summary{
@@ -227,6 +240,20 @@ button.btn.btn-primary{
     margin-bottom: 0.5em;
     color: var(--writebrand);
     font-weight: bold;
+  }
+
+  #buy-book a{
+      color: #fff;      
+  }
+
+  #buy-book a:hover { 
+      color: var(--writebrand);
+      
+  }
+
+  #buy-book:hover{
+    background-color: var(--greybackground);
+
   }
 
   /* #kanise-portfolio-mobile .card-container{

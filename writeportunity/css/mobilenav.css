@@ -46,7 +46,7 @@
 /*Mobile Menu */
 
 .mobile-menu {
-  display:block;
+  display:none;
   width:100%;
   left: 0;
   height: 100vh;
@@ -57,6 +57,7 @@
   top:0;
   background-color: var(--greybackground);
   opacity: 0;
+  
 }
 
 .mobile-menu ul {
@@ -90,7 +91,13 @@
 }
 
 .mobile-menu--open {
+  display:block;
   right:0;
   opacity:.9;
+}
+
+.mobile-menu--close {
+  left:0;
+  opacity:0;
 }
 
