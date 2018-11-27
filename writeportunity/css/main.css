@@ -149,46 +149,41 @@ button.btn.btn-primary{
 } */
 
 /* Kanise Portfolio CSS */
-
-#kanise-marshall{
+#author-bio{
     margin: 3.25em;
-}
-#bio-grid {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 10vw 40vw;
-    grid-gap: 1em;
-    margin: 0 auto;
-    padding: 1em 0;
-  }
-  
-  #kanise-name {
-    grid-column: 1 / span 2;
     margin-bottom: 2em;
-    
-  }
-
-  #kanise-name h3{
-    font-family: 'Bad Script', cursive;
-    color: var(--writebrand);
-    font-weight: bold;
-  }
-
-  #kanise-name,
-  #kanise-image,
-  #kanise-bio{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #eaeaea;
+    border: 1px solid var(--writebrand);
+    padding: 10px;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+  #kanise-image img{
+    border-radius: 50%;
+    max-width: 30em;
+    max-height: 30em;
+    margin: 1em;
   }
 
-  #kanise-bio{
-    background: #eaeaea;
-    border: 1px solid var(--writebrand);
-  }
 
   div#kanise-bio p{
       padding: 1em;
+  }
+
+  #kanise-bio h3{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bad Script', cursive;
+    color: var(--writebrand);
+    font-weight: bold;
+    margin-bottom: 2em;
   }
 
   #kanise-portfolio .card{
@@ -197,8 +192,6 @@ button.btn.btn-primary{
     #kanise-portfolio{
         margin: 4em;
         text-align: center;
-    
-
     }
 
   #kanise-portfolio h4{
@@ -255,15 +248,7 @@ button.btn.btn-primary{
     background-color: var(--greybackground);
 
   }
-
-  /* #kanise-portfolio-mobile .card-container{
-        display: grid;
-        padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 1rem;
-    } */
-
-   
+  
 
     #hr-one{
         background-color: var(--writebrand);
@@ -288,6 +273,11 @@ footer h5{
 .btn{
     background-color: var(--writebrand);
     border: var(--writebrand);
+}
+
+#business-card {
+    max-width: 30em;
+    max-height: 20em;
 }
 
 #footer-copyright{
